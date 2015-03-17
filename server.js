@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var Stat = require('./models/stat');
 
 // Connect the db
-mongoose.connect('mongodb://localhost/ldrly', function(error) {
+mongoose.connect('mongodb://admin:admin@ds043358.mongolab.com:43358/ldrly', function(error) {
 	if (error) {
 		console.log('connection error', error);
 	} else {
@@ -88,10 +88,18 @@ var getLeaderboard = function(statName, req, res) {
    Takes a JSON array of stats and adds 
    a field called rank with the ranking */
 var rankStats = function(stats) {
+	var prevStat = {};
+	var currentRank = 1;
 	// Iterate through all stats
 	for (i = 0; i < stats.length; i++) {
 		stats[i] = stats[i].toJSON();
-		stats[i].rank = i+1;
+		if (prevStat["value"] === stats[i]["value"]) {
+			stats[i].rank = prevStat["rank"];
+		} else {
+			stats[i].rank = currentRank;
+			currentRank++;
+		}
+		prevStat = stats[i];
 	}
 	//return ranked stats
 	return stats;
