@@ -17,17 +17,25 @@ start the server,
 and find a way to send requests and receive responses. For this, I used Postman. You can find it <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en">here</a>.
 
 An example of the URI to which the get request would be made is:
+
 	http://localhost:3000/ldrly/leaderboards/1059
+
 where 1059 is the user id. This gets all the stats for user 1059. 
 You can get the leaderboards by calling:
+
 	http://localhost:3000/ldrly/leaderboards/coins
+
 where coins is a stat. 
 To add a stat, you can call POST with:
+
 	http://localhost:3000/ldrly/leaderboards
+
 where the body of the request should be urlencoded and look something like this:
+
 	key: name    value: level
 	key: uid     value: 1101
 	key: value   value: 17
+	
 This would is also a good suggestion for a POST request test due to how the model was defined (refer to assumption 1.). In Postman, the request build would look something like this:
 
 <img src="./postmanExample.png">
