@@ -29,6 +29,7 @@ where the body of the request should be urlencoded and look something like this:
 	key: uid     value: 1101
 	key: value   value: 17
 This would is also a good suggestion for a POST request test due to how the model was defined (refer to assumption 1.). In Postman, the request build would look something like this:
+
 <img src="./postmanExample.png">
 
 It should be noted that possible values for stat names are as follows:
