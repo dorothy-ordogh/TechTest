@@ -43,6 +43,7 @@ This would is also a good suggestion for a POST request test due to how the mode
 <img src="./postmanExample.png">
 
 It should be noted that possible values for stat names are as follows:
+
 kills, 
 points, 
 level, 
@@ -72,10 +73,13 @@ I have listed the assumptions I made because I didn't want to fill up your inbox
 
 4) In the description of the test, you define getLeaderboard as a function that gets a "JSON sorted list of all recorded users with entires for the specified stat (highest to lowerest) of the username, users ranking, and points scored". I understood this as follows:
 
-	a) return a JSON array
-	b) of stats with uid, points scored, and ranking
-	c) where the ranking is added to the JSON objects after the query and not persisted in the database
-	d) and if there are users that have the same value for the same stats, then both users will have the same rank. For instance, if I am user 1002 and I'm on level 46 and user 1059 is also on level 46, then we will have the same rank.
+  a) return a JSON array
+
+  b) of stats with uid, points scored, and ranking
+
+  c) where the ranking is added to the JSON objects after the query and not persisted in the database
+
+  d) and if there are users that have the same value for the same stats, then both users will have the same rank. For instance, if I am user 1002 and I'm on level 46 and user 1059 is also on level 46, then we will have the same rank.
 
 
 
