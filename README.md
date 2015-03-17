@@ -3,9 +3,11 @@
 This project was the tech test for my LDRLY interview.
 
 In order to run this properly, you will need:
+
     Express version 4.12.1
     Mongoose version 3.8.25
     Body-Parser version 1.12.1
+    
 All of these are defined in the package.json file so all that needs to install the dependencies,
 
 	npm install
@@ -35,7 +37,7 @@ where the body of the request should be urlencoded and look something like this:
 	key: name    value: level
 	key: uid     value: 1101
 	key: value   value: 17
-	
+
 This would is also a good suggestion for a POST request test due to how the model was defined (refer to assumption 1.). In Postman, the request build would look something like this:
 
 <img src="./postmanExample.png">
@@ -69,6 +71,7 @@ I have listed the assumptions I made because I didn't want to fill up your inbox
 3) I used Mongoose because it is a more heavy duty driver, has built in validation, and works for larger systems. I wanted to have experience with this driver because I thought it would be more useful.
 
 4) In the description of the test, you define getLeaderboard as a function that gets a "JSON sorted list of all recorded users with entires for the specified stat (highest to lowerest) of the username, users ranking, and points scored". I understood this as follows:
+
 	a) return a JSON array
 	b) of stats with uid, points scored, and ranking
 	c) where the ranking is added to the JSON objects after the query and not persisted in the database
