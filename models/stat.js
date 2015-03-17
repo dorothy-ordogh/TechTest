@@ -1,5 +1,5 @@
-// ldrlyapp/models/stat.js
-// has stat model
+/* ldrlyapp/models/stat.js
+   has stat model */
 
 var mongoose = require('mongoose');
 

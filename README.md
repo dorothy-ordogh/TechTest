@@ -81,5 +81,14 @@ I have listed the assumptions I made because I didn't want to fill up your inbox
 
   d) and if there are users that have the same value for the same stats, then both users will have the same rank. For instance, if I am user 1002 and I'm on level 46 and user 1059 is also on level 46, then we will have the same rank.
 
+# Where's What
+
+The server.js file contains all of the code related to the server, the invoked function definitions and other helpers.
+
+The schema for the data is located in models/stat.js.
+
+The test folder contains another node app that generated all of the test data and added it all to the database. 
+
+As mentioned above, the package.json file contains all of the dependencies for this app.
 
 

@@ -93,12 +93,19 @@ var rankStats = function(stats) {
 	// Iterate through all stats
 	for (i = 0; i < stats.length; i++) {
 		stats[i] = stats[i].toJSON();
+		// Check if the current stat value matches the 
+		// previous stat. 
 		if (prevStat["value"] === stats[i]["value"]) {
+			// Set the rank to that of previous stat
 			stats[i].rank = prevStat["rank"];
 		} else {
+			// Stat value doesn't match so set rank
+			// and increase rank by 1
 			stats[i].rank = currentRank;
 			currentRank++;
 		}
+		// Set prevStat to the current 
+		// stat for next iteration
 		prevStat = stats[i];
 	}
 	//return ranked stats
