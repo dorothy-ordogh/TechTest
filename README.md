@@ -63,9 +63,9 @@ I have over-simplified this, but I thought it was best to keep it as simple as p
 
 I have listed the assumptions I made because I didn't want to fill up your inbox with tons of emails asking you to clarify. I hope that is okay. 
 
-# Assumptions:
+## Assumptions:
 
-1) The stat model defined was created with the intent that it would be used for one and only one game. This implies that the stat names are unique and the user ids are unique. As a result of this assumption, the model is very simple, and neither the user id or the stat name is defined to be unique.
+1) The stat model defined was created with the intent that it would be used for one and only one game. This implies that the stat names are unique and the user ids are unique (while there are records with the same stat names, and records with the same uid, it is simulating unique uids and stat names). As a result of this assumption, the model is very simple, and neither the user id or the stat name is defined to be unique.
 
 2) I assumed that the terms username and user id were interchangeable, so in this model, uid refers to a user name and vice versa. This was to simplify the stat model.
 
@@ -81,7 +81,7 @@ I have listed the assumptions I made because I didn't want to fill up your inbox
 
   d) and if there are users that have the same value for the same stats, then both users will have the same rank. For instance, if I am user 1002 and I'm on level 46 and user 1059 is also on level 46, then we will have the same rank.
 
-# Where's What
+## Where's What
 
 The server.js file contains all of the code related to the server, the invoked function definitions and other helpers.
 
