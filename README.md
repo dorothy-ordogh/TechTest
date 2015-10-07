@@ -1,5 +1,27 @@
 # TechTest
 
+## Problem:
+
+Create a simple HTTP-based, RESTful API that implements following methods: sendStat, getLeaderboard, and getStats. This functionality must be implemented in using Node.js and Express, and data persisted on MongoDB. The application should check inputs to ensure validity, and requires either a success or failure message upon HTTP response to the client. 
+
+#### Stat Schema
+Here is an example JSON schema that could be used to persist the stats. Feel free to change or expand upon this design:
+
+```
+{
+    “_id”: ObjectId(“540de92d15f55f0c9d636d43”),
+    “name”: “kills”,
+    “uid”: 12341324,
+    “value”: 11,
+    “created_at”: ISODate(“2014-09-08T17:36:45.174Z”)
+}
+```
+
+#### Setup
+To simulate a real world scenario, create 100 unique usernames, each username submits 10 unique stat names (e.g. points, kills, xp, level, missions_complete, etc) with numeric points.
+
+## Solution:
+
 This project was the tech test for my LDRLY interview.
 
 In order to run this properly, you will need:
